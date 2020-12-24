@@ -10,9 +10,8 @@ class RegularUserCreationForm(UserCreationForm):
     """
     class Meta(UserCreationForm.Meta):
         model = RegularUser
-        fields = UserCreationForm.Meta.fields + ('age',) # При создании пользователя еще хотим указывать
-                                                        # и возраст
-        fields = UserCreationForm.Meta.fields + ('phone_number',)
+        fields = UserCreationForm.Meta.fields + ('age','phone_number','postal_code','sex',) 
+        # При создании пользователя еще хотим указывать и возраст
 
 class RegularUserChangeForm(UserChangeForm):
     """

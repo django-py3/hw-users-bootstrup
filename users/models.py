@@ -4,7 +4,7 @@ from django.contrib.auth.models import AbstractUser
 # Create your models here.
 class RegularUser(AbstractUser):
     """
-    Определим поле age
+    Определим поля
     """
     phone_number = models.TextField(null=False, blank=False)
     postal_code = models.TextField(null=False, blank=False)
