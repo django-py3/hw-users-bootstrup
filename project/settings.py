@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'book.apps.BookConfig',
     'journal.apps.JournalConfig',
     'pages.apps.PagesConfig',
-    'accounts.apps.AccountsConfig',
     'users.apps.UsersConfig',
 ]
 
