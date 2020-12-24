@@ -1,11 +1,11 @@
+from django.shortcuts import render
 from django.views.generic import CreateView
-from django.urls import reverse_lazy
-# Стандартный интерфейс взаимодействия со стандартным пользователем
-from django.contrib.auth.forms import UserCreationForm
+from .forms import RegularUserCreationForm
+from django.urls import reverse_lazy 
 
 # Create your views here.
 
 class SignUpView(CreateView):
-    form_class = UserCreationForm
-    template_name = 'signup.html'
+    form_class = RegularUserCreationForm
     success_url = reverse_lazy("login")
+    template_name = "signup.html"
