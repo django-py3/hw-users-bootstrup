@@ -6,8 +6,8 @@ class RegularUser(AbstractUser):
     """
     Определим поля
     """
-    phone_number = models.TextField(null=False, blank=False)
-    postal_code = models.TextField(null=False, blank=False)
+    phone_number = models.CharField(max_length=25, null=False, blank=False)
+    postal_code = models.CharField(max_length=25, null=False, blank=False)
     age = models.PositiveIntegerField(null=True, blank=True)
     sex = models.BooleanField(null=True, blank=True)
     # PositiveIntegerFiled = > Unsigned Int
